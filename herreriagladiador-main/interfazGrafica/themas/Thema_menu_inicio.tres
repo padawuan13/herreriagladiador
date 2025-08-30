@@ -1,0 +1,102 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dl1av3t74hy02"]
+
+[ext_resource type="FontFile" uid="uid://sqdbetptfy8d" path="res://assets/fonts/PrincipalFont.otf" id="1_55qns"]
+[ext_resource type="StyleBox" uid="uid://bdatrf8asyod1" path="res://interfazGrafica/themas/botoninicio.tres" id="1_rsltr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55qns"]
+bg_color = Color(0.151262, 0.407318, 0.237663, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.107814, 0.321627, 0.252662, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_color = Color(0.117647, 0.117647, 0.117647, 0.827451)
+shadow_size = 5
+shadow_offset = Vector2(15, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofxgm"]
+bg_color = Color(0.41598, 0.41598, 0.41598, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.775063, 0.775063, 0.775063, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_color = Color(0.564706, 0.564706, 0.564706, 0.529412)
+shadow_size = 5
+shadow_offset = Vector2(15, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsltr"]
+bg_color = Color(0.646029, 0.646029, 0.646029, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_color = Color(0.34902, 0.34902, 0.34902, 0.658824)
+shadow_size = 5
+shadow_offset = Vector2(15, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcy4x"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.439216, 0.439216, 0.439216, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_color = Color(0, 0, 0, 0.447059)
+shadow_size = 5
+shadow_offset = Vector2(15, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gndit"]
+bg_color = Color(0.377761, 0.662132, 0.610335, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0430392, 0.0430392, 0.0430391, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_color = Color(0, 0.211765, 0, 0.592157)
+shadow_size = 5
+shadow_offset = Vector2(15, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipnq3"]
+bg_color = Color(0.206758, 0.480031, 0.528287, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[resource]
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 33
+Button/fonts/font = ExtResource("1_55qns")
+Button/styles/disabled = ExtResource("1_rsltr")
+Button/styles/disabled_mirrored = ExtResource("1_rsltr")
+Button/styles/focus = SubResource("StyleBoxFlat_55qns")
+Button/styles/hover = SubResource("StyleBoxFlat_ofxgm")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_rsltr")
+Button/styles/normal = SubResource("StyleBoxFlat_vcy4x")
+Button/styles/pressed = SubResource("StyleBoxFlat_gndit")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0.194349, 0.194349, 0.194349, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.643137)
+Label/constants/outline_size = 15
+Label/constants/shadow_outline_size = 15
+Label/font_sizes/font_size = 80
+Label/fonts/font = ExtResource("1_55qns")
+MarginContainer/constants/margin_bottom = 60
+MarginContainer/constants/margin_left = 60
+MarginContainer/constants/margin_right = 60
+MarginContainer/constants/margin_top = 20
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_ipnq3")
+VBoxContainer/constants/separation = 10

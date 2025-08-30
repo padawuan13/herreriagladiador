@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdqycxtk63qf6"]
+
+[ext_resource type="Theme" uid="uid://dl1av3t74hy02" path="res://interfazGrafica/themas/Thema_menu_inicio.tres" id="1_0cp3y"]
+[ext_resource type="Script" uid="uid://3kxd6a1yejq2" path="res://scripts/vista/boton_salir_mp.gd" id="2_10fge"]
+[ext_resource type="Script" uid="uid://xo5sd1d3j42" path="res://scripts/presentador/Inicio_menu_principal.gd" id="2_gjekx"]
+[ext_resource type="Script" uid="uid://cr0410pqr5wj2" path="res://scripts/vista/boton_opc_mp.gd" id="3_d74v3"]
+
+[node name="MenuInicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0cp3y")
+script = ExtResource("2_gjekx")
+
+[node name="ContenedorUi" type="CanvasLayer" parent="."]
+
+[node name="ContenedorPantalla" type="PanelContainer" parent="ContenedorUi"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0cp3y")
+
+[node name="ContenedorMargen" type="MarginContainer" parent="ContenedorUi/ContenedorPantalla"]
+layout_mode = 2
+theme = ExtResource("1_0cp3y")
+
+[node name="ContenedorBotones" type="VBoxContainer" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_0cp3y")
+theme_override_constants/separation = 29
+alignment = 1
+
+[node name="BotonContinuar" type="Button" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen/ContenedorBotones"]
+custom_minimum_size = Vector2(300, 60)
+layout_direction = 1
+layout_mode = 2
+text = "Continuar Partida"
+language = "es_AR"
+
+[node name="BotonCargar" type="Button" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen/ContenedorBotones"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+text = "Cargar Partida"
+
+[node name="BotonIniciar" type="Button" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen/ContenedorBotones"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+text = "Iniciar partida"
+
+[node name="BotonOpciones" type="Button" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen/ContenedorBotones"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+text = "Opciones"
+script = ExtResource("3_d74v3")
+
+[node name="BotonSalir" type="Button" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen/ContenedorBotones"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+text = "Salir al escritorio"
+script = ExtResource("2_10fge")
+
+[node name="ContenedorAnimacion" type="VBoxContainer" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen/ContenedorAnimacion"]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="ContenedorUi/ContenedorPantalla/ContenedorMargen"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Adventure Blacksmith"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ContenedorUi/ContenedorPantalla/ContenedorMargen/ContenedorBotones/BotonSalir" to="ContenedorUi/ContenedorPantalla/ContenedorMargen/ContenedorBotones/BotonSalir" method="_on_pressed"]
